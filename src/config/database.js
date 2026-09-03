@@ -1,4 +1,5 @@
 import { Sequelize } from 'sequelize';
+import pg from 'pg';
 import config from './index.js';
 
 const sequelize = new Sequelize(
@@ -9,6 +10,7 @@ const sequelize = new Sequelize(
   host: config.database.host,
   port: config.database.port,
   dialect: config.database.dialect,
+  dialectModule: pg,
   ...(config.database.ssl && {
     dialectOptions: {
       ssl: {
