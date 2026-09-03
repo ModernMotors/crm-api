@@ -29,6 +29,7 @@ import roleRoutes from './routes/role.routes.js';
 import permissionRoutes from './routes/permission.routes.js';
 import pageAccessRoutes from './routes/pageAccess.routes.js';
 import knowledgeRoutes from './routes/knowledge.routes.js';
+import systemRoutes from './routes/system.routes.js';
 
 dotenv.config();
 
@@ -102,6 +103,7 @@ app.use('/api/roles', roleRoutes);
 app.use('/api/permissions', permissionRoutes);
 app.use('/api/page-access', pageAccessRoutes);
 app.use('/api/knowledge', knowledgeRoutes);
+app.use('/api/system', systemRoutes);
 
 // 404 handler
 app.use(notFoundHandler);
